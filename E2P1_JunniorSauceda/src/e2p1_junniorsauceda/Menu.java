@@ -123,7 +123,7 @@ public class Menu extends javax.swing.JFrame {
                                         + "3.-Salir\n"
                                         + "Ingrese una opcion: "));
             while(opcion<0||opcion>3){
-                opcion=Integer.parseInt(JOptionPane.showInputDialog("La opcion ingresada no es valida ingrese otra opcion"
+                opcion=Integer.parseInt(JOptionPane.showInputDialog("La opcion ingresada no es valida ingrese otra opcion\n"
                                         + "Menu Numeros\n\n"
                                         + "1.-Agregar Numero\n"
                                         + "2.-Eliminar Numero\n"
@@ -177,7 +177,7 @@ public class Menu extends javax.swing.JFrame {
                                                                              + "4.- Menu Principal\n\n"
                                                                              + "Ingrese una opcion"));
                 while(operacion<1||operacion>4){
-                    operacion=Integer.parseInt(JOptionPane.showInputDialog("Opcion Invalida, ingrese una opcion valida"
+                    operacion=Integer.parseInt(JOptionPane.showInputDialog("Opcion Invalida, ingrese una opcion valida\n"
                                                                              + "Menu Operaciones\n\n\n"
                                                                              + "1.- Sumar Numeros\n"
                                                                              + "2.- Restar Numeros\n"
@@ -192,7 +192,7 @@ public class Menu extends javax.swing.JFrame {
                                                                               + Imprimir()+"\n"
                                                                               + "Ingrese el indice del primer numero: "));
                        while(op1<0||op1>Numeros.size()){
-                            op1=Integer.parseInt(JOptionPane.showInputDialog("Ingrese un indice valido"
+                            op1=Integer.parseInt(JOptionPane.showInputDialog("Ingrese un indice valido\n"
                                                                               + "Lista de numeros: \n"
                                                                               + Imprimir()+"\n"
                                                                               + "Ingrese el indice del primer numero: "));
@@ -202,14 +202,14 @@ public class Menu extends javax.swing.JFrame {
                                                                               + Imprimir()+"\n"
                                                                               + "Ingrese el indice del segundo numero: "));
                        while(op2<0||op2>Numeros.size()){
-                            op2=Integer.parseInt(JOptionPane.showInputDialog("Ingrese un indice valido"
+                            op2=Integer.parseInt(JOptionPane.showInputDialog("Ingrese un indice valido\n"
                                                                               + "Lista de numeros: \n"
                                                                               + Imprimir()+"\n"
                                                                               + "Ingrese el indice del segundo numero: "));
                        
                         }
                        int Basedef;
-                       int n=((Numeros.get(op1-1).getOrigen())+(Numeros.get(op2-1).getOrigen()));
+                       int n=((Numeros.get(op1-1).baseToDec())+(Numeros.get(op2-1).baseToDec()));
                        if((Numeros.get(op1-1).getBase())>(Numeros.get(op2-1).getBase())){
                            Basedef=Numeros.get(op1-1).getBase();
                        }
@@ -218,7 +218,7 @@ public class Menu extends javax.swing.JFrame {
                        }
                        N=new Numero(n,Basedef);
                        JOptionPane.showMessageDialog(null, "El resultado es: \n"+
-                               N.getNumero()+"  Base "+N.getBase()+"= "+N.getOrigen()+"\n");
+                               N.getNumero()+"  Base "+N.getBase()+"= "+N.baseToDec()+"\n");
                        
                     }
                     break;
@@ -227,7 +227,7 @@ public class Menu extends javax.swing.JFrame {
                                                                               + Imprimir()+"\n"
                                                                               + "Ingrese el indice del primer numero: "));
                        while(op1<0||op1>Numeros.size()){
-                            op1=Integer.parseInt(JOptionPane.showInputDialog("Ingrese un indice valido"
+                            op1=Integer.parseInt(JOptionPane.showInputDialog("Ingrese un indice valido\n"
                                                                               + "Lista de numeros: \n"
                                                                               + Imprimir()+"\n"
                                                                               + "Ingrese el indice del primer numero: "));
@@ -237,14 +237,14 @@ public class Menu extends javax.swing.JFrame {
                                                                               + Imprimir()+"\n"
                                                                               + "Ingrese el indice del segundo numero: "));
                        while(op2<0||op2>Numeros.size()){
-                            op2=Integer.parseInt(JOptionPane.showInputDialog("Ingrese un indice valido"
+                            op2=Integer.parseInt(JOptionPane.showInputDialog("Ingrese un indice valido\n"
                                                                               + "Lista de numeros: \n"
                                                                               + Imprimir()+"\n"
                                                                               + "Ingrese el indice del segundo numero: "));
                        
                         }
                        int Basedef;
-                       int n=((Numeros.get(op1-1).getOrigen())-(Numeros.get(op2-1).getOrigen()));
+                       int n=((Numeros.get(op1-1).baseToDec())-(Numeros.get(op2-1).baseToDec()));
                        if(n>1){
                        
                         if((Numeros.get(op1-1).getBase())>(Numeros.get(op2-1).getBase())){
@@ -255,7 +255,7 @@ public class Menu extends javax.swing.JFrame {
                         }
                         N=new Numero(n,Basedef);
                         JOptionPane.showMessageDialog(null, "El resultado es: \n"+
-                               N.getNumero()+"  Base "+N.getBase()+"= "+N.getOrigen()+"\n");
+                               N.getNumero()+"  Base "+N.getBase()+"= "+N.baseToDec()+"\n");
                        }
                        else{
                            JOptionPane.showMessageDialog(null, "El numero no puede ser negativo");
@@ -267,7 +267,7 @@ public class Menu extends javax.swing.JFrame {
                                                                               + Imprimir()+"\n"
                                                                               + "Ingrese el indice del primer numero: "));
                        while(op1<0||op1>Numeros.size()){
-                            op1=Integer.parseInt(JOptionPane.showInputDialog("Ingrese un indice valido"
+                            op1=Integer.parseInt(JOptionPane.showInputDialog("Ingrese un indice valido\n"
                                                                               + "Lista de numeros: \n"
                                                                               + Imprimir()+"\n"
                                                                               + "Ingrese el indice del primer numero: "));
@@ -277,14 +277,14 @@ public class Menu extends javax.swing.JFrame {
                                                                               + Imprimir()+"\n"
                                                                               + "Ingrese el indice del segundo numero: "));
                        while(op2<0||op2>Numeros.size()){
-                            op2=Integer.parseInt(JOptionPane.showInputDialog("Ingrese un indice valido"
+                            op2=Integer.parseInt(JOptionPane.showInputDialog("Ingrese un indice valido\n"
                                                                               + "Lista de numeros: \n"
                                                                               + Imprimir()+"\n"
                                                                               + "Ingrese el indice del segundo numero: "));
                        
                         }
                        int Basedef;
-                       int n=((Numeros.get(op1-1).getOrigen())*(Numeros.get(op2-1).getOrigen()));
+                       int n=((Numeros.get(op1-1).baseToDec())*(Numeros.get(op2-1).baseToDec()));
                        if((Numeros.get(op1-1).getBase())>(Numeros.get(op2-1).getBase())){
                            Basedef=Numeros.get(op1-1).getBase();
                        }
@@ -293,7 +293,7 @@ public class Menu extends javax.swing.JFrame {
                        }
                        N=new Numero(n,Basedef);
                        JOptionPane.showMessageDialog(null, "El resultado es: \n"+
-                               N.getNumero()+"  Base "+N.getBase()+"= "+N.getOrigen()+"\n");
+                               N.getNumero()+"  Base "+N.getBase()+"= "+N.baseToDec()+"\n");
                        
                     }
                     break;
@@ -353,7 +353,7 @@ public class Menu extends javax.swing.JFrame {
     public void EliminarNum(){
 //        String Lista="";
 //        for(int i=0;i<Numeros.size();i++){
-//            Lista+=(i+1)+".- "+Numeros.get(i).getNumero()+"  Base "+Numeros.get(i).getBase()+"= "+Numeros.get(i).getOrigen()+"\n";
+//            Lista+=(i+1)+".- "+Numeros.get(i).getNumero()+"  Base "+Numeros.get(i).getBase()+"= "+Numeros.get(i).baseToDec()+"\n";
 //        }
         int Valisteverga=Integer.parseInt(JOptionPane.showInputDialog("Lista de numeros:\n"
                                             +Imprimir()+"\n\n\n"
@@ -371,7 +371,7 @@ public class Menu extends javax.swing.JFrame {
     public String Imprimir(){
         String Lista="";
         for(int i=0;i<Numeros.size();i++){
-            Lista+=(i+1)+".- "+Numeros.get(i).getNumero()+"  Base "+Numeros.get(i).getBase()+"= "+Numeros.get(i).getOrigen()+"\n";
+            Lista+=(i+1)+".- "+Numeros.get(i).getNumero()+"  Base "+Numeros.get(i).getBase()+"= "+Numeros.get(i).baseToDec()+"\n";
         }
         return Lista;
     }

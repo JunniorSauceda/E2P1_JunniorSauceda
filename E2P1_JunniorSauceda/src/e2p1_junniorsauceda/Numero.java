@@ -11,11 +11,11 @@ package e2p1_junniorsauceda;
 public class Numero {
     String Numero;
     int Base;
-    int Origen;
+    
     public Numero(int num,int base){
         this.Numero=decToBase(num, base);
         this.Base=base;
-        this.Origen=num;
+      
     }
     public Numero(){
         
@@ -26,12 +26,7 @@ public class Numero {
     public void setBase(int base){
         this.Base=base;
     }
-    public void setOrigen(int num){
-        this.Origen=num;
-    }
-    public int getOrigen(){
-        return this.Origen;
-    }
+    
     public String getNumero(){
         return this.Numero;
     }
@@ -82,11 +77,18 @@ public class Numero {
         }
         return Basf;
     }
-    public int baseToDec(String respuesta){
+    public int baseToDec(){
         int resp=0;
         int cont=0;
-        for(int i=respuesta.length();i>=0;i--){
-            resp+=(int)Math.pow(Integer.parseInt(String.valueOf(respuesta.indexOf(i))), cont);
+        for(int i=Numero.length()-1;i>=0;i--){
+            int ascii=(int)Numero.charAt(i);
+            if(ascii<=57){
+                ascii-=48;
+            }
+            else{
+                ascii-=87;
+            }
+            resp+=ascii*((int)Math.pow(Base, cont));
             cont++;
         }
         return resp;
